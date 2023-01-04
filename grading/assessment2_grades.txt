@@ -1,0 +1,603 @@
+
+Name : 
+---------
+Correctness: 13 pts/13
+> notes: 
+
+Code design: 8 pts/8
+> notes: 
+
+Bonus: 2 pts
+
+Total: PCT
+___________________________________
+
+            
+Andrea Leach : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7.5/8
+> notes: 
+
+Bonus: 1
+
+Total: 102.38%
+___________________________________
+
+            
+Anthony Johnson : 
+---------
+Correctness: 12/13
+> notes: 
+
+Code design: 5/8
+> notes: 
+
+Bonus: 1
+
+Total: 85.71%
+___________________________________
+
+            
+Benjamin Melvin : 
+---------
+Correctness: 12/13
+> notes: 
+
+Code design: 5/8
+> notes: 
+
+Bonus: 0
+
+Total: 80.95%
+___________________________________
+
+            
+Bryan Clay : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7.5/8
+> notes: 
+
+Bonus: 1
+
+Total: 102.38%
+___________________________________
+
+            
+Cameron Wilke : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 8/8
+> notes: 
+
+Bonus: 1
+
+Total: 104.76%
+___________________________________
+
+            
+Christopher Neal : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 100.00%
+___________________________________
+
+            
+Corbin Waugh : 
+---------
+Correctness: 10.5/13
+> notes: 
+
+Code design: 5/8
+> notes: 
+
+Bonus: 1.5
+
+Total: 80.95%
+___________________________________
+
+            
+Darius Roberts : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 100.00%
+___________________________________
+
+            
+DeKayla Phillips : 
+---------
+Correctness: 7/13
+> notes: 
+
+Code design: 6/8
+> notes: 
+
+Bonus: 0
+
+Total: 61.90%
+___________________________________
+
+            
+Destin Royer : 
+---------
+Correctness: /13
+> notes: 
+
+Code design: /8
+> notes: 
+
+Bonus: 
+
+Total: 0.00%
+___________________________________
+
+            
+Eric Chou : 
+---------
+Correctness: /13
+> notes: 
+
+Code design: /8
+> notes: 
+
+Bonus: 
+
+Total: 0.00%
+___________________________________
+
+            
+Eric Dominguez : 
+---------
+Correctness: 10/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 85.71%
+___________________________________
+
+            
+Gabriel Seda-Wilmarth : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 11/8
+> notes: 
+
+Bonus: 1
+
+Total: 119.05%
+___________________________________
+
+            
+Garrett Silong : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 8/8
+> notes: 
+
+Bonus: 0
+
+Total: 100.00%
+___________________________________
+
+            
+Hasan Nguyen : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 100.00%
+___________________________________
+
+            
+Jacob Jean : 
+---------
+Correctness: 12.5/13
+> notes: 
+
+Code design: 6/8
+> notes: 
+
+Bonus: 0
+
+Total: 88.10%
+___________________________________
+
+            
+Jacorious Smith : 
+---------
+Correctness: 1/13
+> notes: 
+
+Code design: 4/8
+> notes: 
+
+Bonus: 0
+
+Total: 23.81%
+___________________________________
+
+            
+Jaedyn Keister : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 100.00%
+___________________________________
+
+            
+James Thalacker : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 95.24%
+___________________________________
+
+            
+Jason Sodenkamp : 
+---------
+Correctness: 10/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 85.71%
+___________________________________
+
+            
+Joseph Aubrey : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 0
+
+Total: 95.24%
+___________________________________
+
+            
+Joseph Barron : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 6/8
+> notes: 
+
+Bonus: 1
+
+Total: 95.24%
+___________________________________
+
+            
+Kenneth Kinder : 
+---------
+Correctness: 6.5/13
+> notes: 
+
+Code design: 5/8
+> notes: 
+
+Bonus: 1
+
+Total: 59.52%
+___________________________________
+
+            
+Kevin Lusk : 
+---------
+Correctness: 7/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 0
+
+Total: 66.67%
+___________________________________
+
+            
+Lily Yang : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 6/8
+> notes: 
+
+Bonus: 1
+
+Total: 95.24%
+___________________________________
+
+            
+Luigi Yebra : 
+---------
+Correctness: 7/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 71.43%
+___________________________________
+
+            
+Luis Figueroa : 
+---------
+Correctness: 11/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 0
+
+Total: 85.71%
+___________________________________
+
+            
+Maricco Allen : 
+---------
+Correctness: 6.5/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 0
+
+Total: 64.29%
+___________________________________
+
+            
+Matthew Weil : 
+---------
+Correctness: 9/13
+> notes: 
+
+Code design: 3/8
+> notes: 
+
+Bonus: 1
+
+Total: 61.90%
+___________________________________
+
+            
+Michael Boyles : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 2
+
+Total: 104.76%
+___________________________________
+
+            
+Netanel Frankel : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 6/8
+> notes: 
+
+Bonus: 2
+
+Total: 100.00%
+___________________________________
+
+            
+Nicholas Kinnamon : 
+---------
+Correctness: 12/13
+> notes: 
+
+Code design: 6/8
+> notes: 
+
+Bonus: 1
+
+Total: 90.48%
+___________________________________
+
+            
+Nicholas Smith : 
+---------
+Correctness: 8/13
+> notes: 
+
+Code design: 6/8
+> notes: 
+
+Bonus: 1
+
+Total: 71.43%
+___________________________________
+
+            
+Ricardo Orozco Chang : 
+---------
+Correctness: 8.5/13
+> notes: 
+
+Code design: 3/8
+> notes: 
+
+Bonus: 1
+
+Total: 54.76%
+___________________________________
+
+            
+Robert Ryan : 
+---------
+Correctness: 11/13
+> notes: 
+
+Code design: 8/8
+> notes: 
+
+Bonus: 1
+
+Total: 95.24%
+___________________________________
+
+            
+Samuel Son : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 100.00%
+___________________________________
+
+            
+Sevastian Schlau : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 8/8
+> notes: 
+
+Bonus: 1
+
+Total: 104.76%
+___________________________________
+
+            
+Sid Reddy : 
+---------
+Correctness: 10/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 85.71%
+___________________________________
+
+            
+Spencer Schanzer : 
+---------
+Correctness: 6.5/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 69.05%
+___________________________________
+
+            
+Thomas Vesser : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 8/8
+> notes: 
+
+Bonus: 0
+
+Total: 100.00%
+___________________________________
+
+            
+Yazide Chitou : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 1
+
+Total: 100.00%
+___________________________________
+
+            
+Zachary Hanley : 
+---------
+Correctness: 13/13
+> notes: 
+
+Code design: 7/8
+> notes: 
+
+Bonus: 0
+
+Total: 90.48%
+___________________________________
+
+            
