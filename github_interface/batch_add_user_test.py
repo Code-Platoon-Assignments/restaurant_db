@@ -5,39 +5,46 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Returns a Github User ID from a Username
+def fetch_user_id(github_username, headers):
+    # Grab the user id from GitHub
+    url = f"https://api.github.com/search/users?q={github_username}"
+    response = requests.get(url, headers=headers)
+    data = response.json()
+    # RETURNS the ID of the user
+    return data['items'][0]['id']  
+
+# Makes a POST request to GitHub to add a user to an organization
+def add_user_to_org(org_name, user_id, headers):
+    # Set the API endpoint for sending an invitation
+    url = f"https://api.github.com/orgs/{org_name}/invitations"
+
+    # Set the data for the POST API call
+    data = {"invitee_id": user_id}
+
+    # Make the POST request to send the invitation
+    response = requests.post(url, json=data, headers=headers)
+
+    # Check the status code of the response
+    if response.status_code == 201:
+        return (f"Invitation for {user_id} sent successfully.")
+    else:
+        return ("An error occurred: ", response.json())
+
 # Set up the auth token and headers
 auth_token = os.environ["GITHUB_TOKEN"]
 headers = {"Authorization": f"Token {auth_token}"}
 
 # Set the organization name and the GitHub username of the user to invite
 org_name = "tangoplatoon"
-user_id = 1092258960  # id number for my user; Got it through calling GET https://api.github.com/users/zalmoujahed
 
-# Set the API endpoint for sending an invitation
-url = f"https://api.github.com/orgs/{org_name}/invitations"
+### FOR LOOP GOES HERE ###
 
-# Set the data for the POST API call
-data = {"invitee_id": user_id}
+# Grab the user ID from the text file
+user_name = ''
 
-# Make the POST request to send the invitation
-# response = requests.post(url, json=data, headers=headers)
+# Set the User's GitHub id
+user_id = fetch_user_id(user_name, headers)  
 
-# Check the status code of the response
-# if response.status_code == 201:
-#     print("Invitation sent successfully.")
-# else:
-#     print("An error occurred: ", response.json())
-
-
-def fetch_user_id(github_username, headers):
-    url = f"https://api.github.com/search/users?q={github_username}"
-
-    response = requests.get(url, headers=headers)
-    data = response.json()
-
-    # print(data['items'][0]['id']) 
-    return data['items'][0]['id']  # RETURNS the ID of the user
-
-print(fetch_user_id("Ickarus75", headers))
-
-    
+# Send an invitation to the user
+add_user_to_org(org_name, user_id, headers)
