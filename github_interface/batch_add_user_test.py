@@ -5,8 +5,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Set up the auth token and headers
+auth_token = os.environ["GITHUB_TOKEN"]
+headers = {"Authorization": f"Token {auth_token}"}
+
 # Returns a Github User ID from a Username
-def fetch_user_id(github_username, headers):
+def fetch_user_id(github_username):
     # Grab the user id from GitHub
     url = f"https://api.github.com/search/users?q={github_username}"
     response = requests.get(url, headers=headers)
@@ -15,7 +19,7 @@ def fetch_user_id(github_username, headers):
     return data['items'][0]['id']  
 
 # Makes a POST request to GitHub to add a user to an organization
-def add_user_to_org(org_name, user_id, headers):
+def add_user_to_org(org_name, user_id):
     # Set the API endpoint for sending an invitation
     url = f"https://api.github.com/orgs/{org_name}/invitations"
 
@@ -26,25 +30,26 @@ def add_user_to_org(org_name, user_id, headers):
     response = requests.post(url, json=data, headers=headers)
 
     # Check the status code of the response
-    if response.status_code == 201:
-        return (f"Invitation for {user_id} sent successfully.")
+    if int(response.status_code) == 201:
+        print (f"Invitation for {user_id} sent successfully.")
+        return
     else:
-        return ("An error occurred: ", response.json())
+        print ("An error occurred: ", response.json())
+        return
 
-# Set up the auth token and headers
-auth_token = os.environ["GITHUB_TOKEN"]
-headers = {"Authorization": f"Token {auth_token}"}
+
 
 # Set the organization name and the GitHub username of the user to invite
 org_name = "tangoplatoon"
 
-### FOR LOOP GOES HERE ###
-for line in list:
-    # Grab the user ID from the text file
-    user_name = ''
+with open('./data/user_ids.txt') as file:
 
-    # Set the User's GitHub id
-    user_id = fetch_user_id(user_name, headers)  
+    for line in file:
 
-    # Send an invitation to the user
-    add_user_to_org(org_name, user_id, headers)
+        user_name = line.strip()
+
+        # Set the User's GitHub id
+        user_id = fetch_user_id(user_name)  
+
+        # Send an invitation to the user
+        add_user_to_org(org_name, user_id)
