@@ -39,12 +39,12 @@ headers = {"Authorization": f"Token {auth_token}"}
 org_name = "tangoplatoon"
 
 ### FOR LOOP GOES HERE ###
+for line in list:
+    # Grab the user ID from the text file
+    user_name = ''
 
-# Grab the user ID from the text file
-user_name = ''
+    # Set the User's GitHub id
+    user_id = fetch_user_id(user_name, headers)  
 
-# Set the User's GitHub id
-user_id = fetch_user_id(user_name, headers)  
-
-# Send an invitation to the user
-add_user_to_org(org_name, user_id, headers)
+    # Send an invitation to the user
+    add_user_to_org(org_name, user_id, headers)
