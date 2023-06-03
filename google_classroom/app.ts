@@ -45,9 +45,20 @@ function getCourse(courseId: GoogleAppsScript.Classroom.Schema.Course["id"]) {
   return course;
 }
 
+function getCourseTopics(course: GoogleAppsScript.Classroom.Schema.Course) {
+  return Classroom.Courses.Topics.list(course.id);
+}
+
 function getCourseAssignments(course: GoogleAppsScript.Classroom.Schema.Course) {
   const assignments = Classroom.Courses.CourseWork.list(course.id);
   return assignments;
+}
+
+/***
+ * Helper functions 
+ */
+function getTangoPlatoon() {
+  return getCourse('576555342077');
 }
 
 function getTangoAssignments() {
@@ -55,12 +66,8 @@ function getTangoAssignments() {
   return getCourseAssignments(course);
 }
 
-
-/***
- * Helper functions 
- */
-function getTangoPlatoon() {
-  return getCourse('576555342077');
+function getTangoTopics() {
+  return getCourseTopics(getTangoPlatoon());
 }
 
 function getUniformPlatoon() {
