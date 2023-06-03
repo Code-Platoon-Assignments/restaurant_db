@@ -31,13 +31,13 @@ function listCourses() {
 }  
 
 /***
- * A hello world function you can run to make sure everything works.
+ * hello world functions you can run to make sure everything works.
  */
-const greeter = (person: string) => {
+const helloWorld = (person: string) => {
     return `Hello, ${person}!`;
   }
   
-  function testGreeter() {
-    const user = 'Grant';
-    Logger.log(greeter(user));
-  }
+function testHelloWorld() {
+  const user = 'Grant';
+  Logger.log(helloWorld(user));
+}
