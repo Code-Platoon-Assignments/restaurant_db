@@ -50,8 +50,7 @@ function getCourseTopics(course: GoogleAppsScript.Classroom.Schema.Course) {
 }
 
 function getCourseAssignments(course: GoogleAppsScript.Classroom.Schema.Course) {
-  const assignments = Classroom.Courses.CourseWork.list(course.id);
-  return assignments;
+  return Classroom.Courses.CourseWork.list(course.id);
 }
 
 /***
@@ -62,8 +61,7 @@ function getTangoPlatoon() {
 }
 
 function getTangoAssignments() {
-  const course = getTangoPlatoon();
-  return getCourseAssignments(course);
+  return getCourseAssignments(getTangoPlatoon());
 }
 
 function getTangoTopics() {
