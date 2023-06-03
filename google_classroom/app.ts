@@ -33,13 +33,16 @@ function listCourses() {
   }
 }
 
-function getCourse(courseId: string) {
+function getCourse(courseId: GoogleAppsScript.Classroom.Schema.Course["id"]) {
   const course = Classroom.Courses.get(courseId);
-  console.log(`Got course - ${course.descriptionHeading} - id - ${course.id}`);
+  console.log(`Got course - ${course.name} ${course.descriptionHeading} - id - ${course.id}`);
   return course;
 }
 
-/** Helper functions */
+
+/***
+ * Helper functions 
+ */
 function getTangoPlatoon() {
   return getCourse('576555342077');
 }
