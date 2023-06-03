@@ -45,6 +45,16 @@ function getCourse(courseId: GoogleAppsScript.Classroom.Schema.Course["id"]) {
   return course;
 }
 
+function getCourseAssignments(course: GoogleAppsScript.Classroom.Schema.Course) {
+  const assignments = Classroom.Courses.CourseWork.list(course.id);
+  return assignments;
+}
+
+function getTangoAssignments() {
+  const course = getTangoPlatoon();
+  return getCourseAssignments(course);
+}
+
 
 /***
  * Helper functions 
