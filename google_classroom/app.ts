@@ -65,18 +65,20 @@ function createTopic(course: GoogleAppsScript.Classroom.Schema.Course, name: str
 
 // See https://developers.google.com/classroom/guides/manage-coursework
 // API reference: https://developers.google.com/classroom/reference/rest/v1/courses.courseWork
-function createAssignment(course: GoogleAppsScript.Classroom.Schema.Course) {
-  const courseWork: GoogleAppsScript.Classroom.Schema.CourseWork = {
-    'title': 'Ant colonies',
-    'description': 'Read the article about ant colonies and complete the quiz.',
-    'materials': [
-      { 'link': { 'url': 'http://example.com/ant-colonies' } },
-      { 'link': { 'url': 'http://example.com/ant-quiz' } }
-    ],
-    'workType': 'ASSIGNMENT',
-    'state': 'PUBLISHED',
-  };
-
+/**
+ * 
+ * @param course Course Schema object
+ * @param courseWork Coursework schema object
+ *  - `workType`: must be 'ASSIGNMENT' to create an Assignment in google classroom
+ *  - `status`: 'PUBLISHED' assigns it right away. 'DRAFT' is a saved assignment students can't see yet.
+ *              see https://developers.google.com/classroom/reference/rest/v1/courses.courseWork#courseworkstate for details.
+ * -  `topicId`: Optional field. Use this to connect the Assignment to a Topic.
+ * @returns 
+ */
+function createAssignment(
+  course: GoogleAppsScript.Classroom.Schema.Course,
+  courseWork: GoogleAppsScript.Classroom.Schema.CourseWork,
+  ) {
   try {
     return Classroom.Courses.CourseWork.create(courseWork, course.id);
   } catch (err) {
@@ -90,7 +92,22 @@ function createAssignment(course: GoogleAppsScript.Classroom.Schema.Course) {
 
 // Create an assignment
 function createTestCourseAssignment() {
-  return createAssignment(getTestCourse());
+  const courseWork: GoogleAppsScript.Classroom.Schema.CourseWork = {
+    title: 'Super Ant colonies',
+    description: 'Read the article about ant colonies and complete the quiz.',
+    materials: [
+      { link: { 'url': 'http://example.com/ant-colonies' } },
+      { link: { 'url': 'http://example.com/ant-quiz' } }
+    ],
+    workType: 'ASSIGNMENT',
+    // 'PUBLISH' assigns it right away. 'DRAFT' will save it but not yet assign to students
+    state: 'PUBLISHED',
+    // optional. Don't include if you don't want to assign to a topic.
+    // Use `getCourseTopics()` to get a list of all topics & their ids and manually add the desired topic id.
+    // topicId:
+  };
+
+  return createAssignment(getTestCourse(), courseWork);
 }
 
 // Create a topic
