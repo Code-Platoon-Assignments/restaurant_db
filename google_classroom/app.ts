@@ -53,24 +53,84 @@ function getCourseAssignments(course: GoogleAppsScript.Classroom.Schema.Course) 
   return Classroom.Courses.CourseWork.list(course.id);
 }
 
+// See https://developers.google.com/classroom/guides/manage-topics
+// API docs: https://developers.google.com/classroom/reference/rest/v1/courses.topics
+function createTopic(course: GoogleAppsScript.Classroom.Schema.Course, name: string) {
+  try {
+    return Classroom.Courses.Topics.create({ name }, course.id);
+  } catch (err) {
+    return err;
+  }
+}
+
+// See https://developers.google.com/classroom/guides/manage-coursework
+// API reference: https://developers.google.com/classroom/reference/rest/v1/courses.courseWork
+function createAssignment(course: GoogleAppsScript.Classroom.Schema.Course) {
+  const courseWork: GoogleAppsScript.Classroom.Schema.CourseWork = {
+    'title': 'Ant colonies',
+    'description': 'Read the article about ant colonies and complete the quiz.',
+    'materials': [
+      { 'link': { 'url': 'http://example.com/ant-colonies' } },
+      { 'link': { 'url': 'http://example.com/ant-quiz' } }
+    ],
+    'workType': 'ASSIGNMENT',
+    'state': 'PUBLISHED',
+  };
+
+  try {
+    return Classroom.Courses.CourseWork.create(courseWork, course.id);
+  } catch (err) {
+    return err;
+  }
+}
+
 /***
  * Helper functions 
  */
+
+// Create an assignment
+function createTestCourseAssignment() {
+  return createAssignment(getTestCourse());
+}
+
+// Create a topic
+function createTestCourseTopic() {
+  return createTopic(getTestCourse(), "Yet another API generated Topic");
+}
+
+// Get a specific google classroom (course)
+function getTestCourse() {
+  return getCourse('522784645757');
+}
+
 function getTangoPlatoon() {
   return getCourse('576555342077');
+}
+
+function getUniformPlatoon() {
+  return getCourse('612339173048');
+}
+
+// Get all coursework for a specific course
+function getTestCourseAssignments() {
+  return getCourseAssignments(getTestCourse());
 }
 
 function getTangoAssignments() {
   return getCourseAssignments(getTangoPlatoon());
 }
 
+// Get all topics for a specific course
+function getTestCourseTopics() {
+  return getCourseTopics(getTestCourse());
+}
+
 function getTangoTopics() {
   return getCourseTopics(getTangoPlatoon());
 }
 
-function getUniformPlatoon() {
-  return getCourse('612339173048');
-}
+// Create 
+
 
 /***
  * hello world functions you can run to make sure everything works.
