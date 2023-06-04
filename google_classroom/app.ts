@@ -101,10 +101,10 @@ function createTestCourseAssignment() {
     ],
     workType: 'ASSIGNMENT',
     // 'PUBLISH' assigns it right away. 'DRAFT' will save it but not yet assign to students
-    state: 'PUBLISHED',
+    state: 'DRAFT',
     // optional. Don't include if you don't want to assign to a topic.
     // Use `getCourseTopics()` to get a list of all topics & their ids and manually add the desired topic id.
-    // topicId:
+    topicId: '612916789545',
   };
 
   return createAssignment(getTestCourse(), courseWork);
