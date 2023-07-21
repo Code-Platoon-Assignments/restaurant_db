@@ -16,8 +16,9 @@ In a separate directory follow this [Google tutorial on writing a "hello world" 
 2. `clasp login`
 3. Run `clasp pull` and then `clasp open` to confirm clasp is set up. This will pull down the app script project from Google cloud, and then, open the project code in google's in-browser editor. This is just to confirm you have correct accesses.
 4. Ask someone for the OAuth credentials for this project. Once they give them to you (they will be text in JSON format) put them in a file named `creds.json` in the project root.
-    a. Then run `clasp login --creds creds.json`. **NEVER CHECK creds.json into version control.**
-    b. This will have generated a file named `.clasprc.json` which is your access toekn. **Never check this file into version control.**
+    1. Then run `clasp login --creds creds.json`. **NEVER CHECK creds.json into version control.**
+
+    2. This will have generated a file named `.clasprc.json` which is your access token. **Never check this file into version control.**
 5. `clasp push`
 6. `clasp run` -- this should prompt you on the command line to select a function you wish to run. Run a "helloworld" function first as a test.
 
