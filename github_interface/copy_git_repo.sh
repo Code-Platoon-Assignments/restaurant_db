@@ -1,12 +1,15 @@
 #!/bin/bash
 # copyrepos
 # ---------------
-# Clone a list of repos from one gh organization into another organization --
-# the new repos have the same name.
+# Clone a repo from one gh organization into another organization --
+# the new repo will have the same name.
+# Git commit history is preserved.
 # Intended to help us easily copy assignment repos from one org to another,
 # as we currently create a new gh org for each platoon/cohort.
 #
-# Reqirements
+# See source of this code - https://github.com/eleniums/copy-git-repo - for README with details
+
+# Requirements
 # --------------
 # - github cli tool.
 #	- See https://cli.github.com/ for docs & install instructions.
@@ -38,18 +41,8 @@ target_url="https://github.com/$target_org/$repo_name"
 # Create empty repo in target org
 gh repo create $target_org/$repo_name --private
 
-
-
-#!/bin/bash
-# Clone a git repo and push to a new location
-# Usage: copyrepo.sh source-repository-url destination-repository-url
-# Ex: copyrepo.sh https://github.com/exampleuser/source-repository.git https://github.com/exampleuser/destination-repository.git
-
-# See source of this code - https://github.com/eleniums/copy-git-repo - for README with details
-
 # this is the name of the temporary directory to use
 temp_dir=copyrepo-temp
-
 
 # create a copy of the source repository
 git clone --bare $source_url $temp_dir
